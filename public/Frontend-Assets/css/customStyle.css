@@ -1,0 +1,2653 @@
+/* ==============================================
+   বাংলাদেশ সরকারী ওয়েবসাইটের জন্য কাস্টম CSS - বুটস্ট্রাপ ৫
+   ============================================== */
+
+/* গুগল ফন্ট ইমপোর্ট */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+
+/* CSS ভেরিয়েবলস - সামঞ্জস্যপূর্ণ থিমিং এর জন্য */
+:root {
+    --primary-green: #2A6E3F;       /* প্রধান সবুজ রং (বনসাই গ্রীন) */
+    --secondary-green: #1A9B9F;     /* দ্বিতীয় সবুজ রং (এনার্জি টিল) */
+    --accent-orange: #F2C14E;       /* আকর্ষণীয় কমলা রং (হোপ গোল্ড) */
+    --text-dark: #333333;           /* গাঢ় টেক্সট রং (ডার্ক চারকোল) */
+    --white: #ffffff;               /* সাদা রং */
+    --light-gray: #f8f9fa;          /* হালকা গ্রে রং */
+    --cream-white: #F5F5E9;         /* ক্রিম সাদা রং */
+}
+
+/* ==============================================
+   বেস স্টাইলস
+   ============================================== */
+
+body {
+   font-family: 'Nunito', 'Kalpurush', sans-serif;
+   font-weight: 100;
+   font-size: 95%;
+    line-height: 1.6;
+    color: #333333;
+    background-color: var(--cream-white);
+}
+
+/* ==============================================
+   বুটস্ট্রাপ ওভাররাইডস - কাস্টম স্টাইলিং
+   ============================================== */
+
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+.bg-secondary {
+    background: linear-gradient(135deg, var(--secondary-green) 0%, var(--cream-white) 100%) !important;
+}
+.bg-fatafati {
+    background: linear-gradient(35deg, var(--primary-green) 0%, var(--secondary-green) 78%, var(--cream-white) 100%) !important;
+}
+.bg-cream {
+    background: linear-gradient(35deg, var(--cream-white) 0%, var(--white) 78%, var(--cream-white) 100%) !important;
+}
+.text-primary {
+    color: var(--primary-green) !important;
+}
+.text-secondary {
+    color: var(--secondary-green) !important;
+}
+.text-accent {
+    color: var(--accent-orange) !important;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-green) !important;
+    border-color: var(--secondary-green) !important;
+}
+.btn-secondary:hover {
+    background-color: var(--secondary-green) !important;
+    color:var(--accent-orange) !important;
+    border-color: var(--accent-orange) !important;
+}
+.btn-accent {
+    background-color: var(--accent-orange) !important;
+    border-color: var(--accent-orange) !important;
+}
+.btn-accent:hover {
+    background-color: var(--accent-orange) !important;
+    border-color: var(--secondary-green) !important;
+    color:var(--secondary-green) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-green) !important;
+    border-color: var(--primary-green) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--secondary-green) !important;
+    border-color: var(--accent-orange) !important;
+	color: var(--accent-orange) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--secondary-green) !important;
+    border-color: var(--secondary-green) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary-green) !important;
+    border-color: var(--accent-orange) !important;
+	color: var(--accent-orange) !important;
+}
+
+/* ==============================================
+   হেডার স্টাইলস
+   ============================================== */
+
+header {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dakhulaleft {
+    animation: dakhulaleft 5s linear 0s infinite alternate;
+}
+
+@keyframes dakhulaleft {
+     0% {
+        top: 0px;
+    }
+
+    25% {
+        top: -5px;
+    }
+
+    50% {
+        top: -9px;
+    }
+
+    75% {
+        top: -5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+
+}
+
+.dakhularight {
+    animation: dakhularight 5s linear 0s infinite alternate;
+}
+
+@keyframes dakhularight {
+     0% {
+        transform: rotateZ(4.5deg);
+    }
+
+    25% {
+        transform: rotateZ(2deg);
+    }
+
+    50% {
+        transform: rotateZ(-1.9deg);
+    }
+
+    75% {
+        transform: rotateZ(2deg);
+    }
+
+    100% {
+        transform: rotateZ(4.5deg);
+    }
+
+}
+
+.gopileft {
+    animation: gopileft 10s linear 0s infinite ;
+}
+
+@keyframes gopileft {
+
+    0% {
+        right: 0px;
+        opacity: 1;
+    }
+
+    40% {
+        right: 10px;
+        opacity: 1;
+    }
+
+    53% {
+        right: 10px;
+        opacity: 1;
+    }
+
+    54% {
+        right: 15px;
+        opacity: 0;
+    }
+
+    75% {
+        right: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 25px;
+        opacity: 0;
+    }
+}
+.gopiright {
+    animation: gopiright 10s linear 0s infinite ;
+}
+
+@keyframes gopiright {
+
+    0% {
+        right: 25px;
+        opacity: 0;
+        
+    }
+
+    25% {
+        right: 25px;
+        opacity: 0;
+        
+    }
+
+    53% {
+        right: 25px;
+        opacity: 0;
+    }
+
+    54% {
+        right: 20px;
+        opacity: 1;
+    }
+
+    90% {
+        right: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        right: 10px;
+        opacity: 1;
+    }
+}
+/* ==============================================
+   এনহ্যান্সড নেভিগেশন স্টাইলস
+   ============================================== */
+
+.navbar {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid rgba(42, 110, 63, 0.1);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    
+}
+
+.navbar.scrolled {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.98) 100%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-green) !important;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 4px rgba(42, 110, 63, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 4px 8px rgba(42, 110, 63, 0.2);
+}
+
+.navbar-nav .nav-link {
+    color: #333333 !important;
+    font-weight: 600;
+    padding: 0.875rem 1.25rem !important;
+    margin: 0 0.125rem;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    min-width: 100px;
+    border-bottom: none;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(42, 110, 63, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    left: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-green) !important;
+    background: linear-gradient(135deg, rgba(42, 110, 63, 0.1) 0%, rgba(26, 155, 159, 0.1) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(42, 110, 63, 0.15);
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(42, 110, 63, 0.3);
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+    border-radius: 2px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+    transition: transform 0.3s ease;
+    border-radius: 1px;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-toggler {
+    border: 2px solid rgba(42, 110, 63, 0.2);
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-toggler:hover {
+    background: linear-gradient(135deg, rgba(42, 110, 63, 0.1) 0%, rgba(26, 155, 159, 0.1) 100%);
+    border-color: var(--primary-green);
+    transform: scale(1.05);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(42, 110, 63, 0.25);
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(42, 110, 63, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ==============================================
+   মোবাইল নেভিগেশন এনহ্যান্সমেন্টস
+   ============================================== */
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.98) 100%);
+        border-radius: 15px;
+        margin-top: 1rem;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(42, 110, 63, 0.1);
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0.25rem 0;
+        padding: 1rem 1.5rem !important;
+        border-radius: 10px;
+        text-align: left;
+        min-width: auto;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        transform: translateX(10px);
+    }
+    
+    .navbar-nav .nav-link.active {
+        transform: translateX(5px);
+    }
+    
+    /* মোবাইলে navbar স্ট্যাটিক রাখুন */
+    .navbar {
+        position: static !important;
+        transform: none !important;
+    }
+}
+
+/* ==============================================
+   ডেস্কটপ-শুধু স্ক্রোল বিহেভিয়ার
+   ============================================== */
+
+@media (min-width: 992px) {
+    /* স্ক্রোলের জন্য নেভিগেশন অ্যানিমেশন */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .navbar.scrolled {
+        animation: slideDown 0.5s ease;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1020;
+    }
+}
+
+/* ==============================================
+   এনহ্যান্সড ড্রপডাউন স্টাইলস
+   ============================================== */
+
+.dropdown-menu {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.98) 100%);
+    border: 1px solid rgba(42, 110, 63, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+    min-width: 220px;
+    animation: dropdownFadeIn 0.3s ease;
+    overflow: hidden;
+    
+}
+
+.dropdown-menu-animated {
+    transform-origin: top center;
+    animation: dropdownSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-item {
+    color: #333333;
+    font-weight: 500;
+    padding: 0.23rem 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(42, 110, 63, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.dropdown-item:hover::before {
+    left: 100%;
+}
+
+.dropdown-item:hover {
+    color: var(--primary-green);
+    background: linear-gradient(135deg, rgba(42, 110, 63, 0.1) 0%, rgba(26, 155, 159, 0.1) 100%);
+    transform: translateX(10px);
+    padding-left: 2rem;
+    
+}
+
+.dropdown-item.active {
+    color: white;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    font-weight: 600;
+}
+
+.dropdown-item.active::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+.dropdown-divider {
+    margin: 0.5rem 1.5rem;
+    border-color: rgba(42, 110, 63, 0.2);
+    opacity: 0.5;
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* ড্রপডাউন অ্যানিমেশন */
+@keyframes dropdownSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==============================================
+   হিরো সেকশন এবং ক্যারousel স্টাইলস
+   ============================================== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item img {
+    height: 400px;
+}
+
+.carousel .carousel-item img {
+    object-fit: cover;
+    animation-name: image-zoom;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: 2s;
+}
+
+.carousel-caption {
+    background: rgba(42, 110, 63, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.0rem;
+    color: var(--white);
+    margin-bottom: 0.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption .btn {
+    margin-top: 15px;
+    background-color: var(--secondary-green);
+    border-color: var(--secondary-green);
+    color: var(--white);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators {
+    bottom: 1px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--secondary-green);
+    border: 2px solid transparent;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--accent-orange);
+    transform: scale(1.3);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(42, 110, 63, 0.7);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 1rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: 1rem;
+}
+
+.carousel-control-next {
+    right: 1rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* ইমেজ জুম অ্যানিমেশন (ঐচ্ছিক) */
+@keyframes image-zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* ==============================================
+   সার্ভিস কার্ডস স্টাইলস হোম পেজ
+   ============================================== */
+
+.service-section {
+    margin-bottom:30px;
+    background-color: var(--cream-white);
+}
+
+.service-section h5 {
+    color: var(--text-dark);
+    position: relative;
+}
+
+.border-bottom {
+    background-color: var(--accent-orange);
+    height: 4px !important;
+}
+
+.services-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.services-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 30px 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+.services-track::-webkit-scrollbar {
+    display: none;
+}
+
+.services-track.grabbing {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.service-item {
+    flex: 0 0 auto;
+    width: 300px;
+    transition: transform 0.3s ease;
+	
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: linear-gradient(145deg, var(--white) 60%, rgba(42, 110, 63, 0.05) 100%);
+}
+
+.service-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+	
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-green), var(--secondary-green));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(26, 155, 159, 0.3);
+}
+
+.card-title {
+    color: var(--primary-green);
+    font-size: 1.00rem;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--primary-green), var(--secondary-green));
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(42, 110, 63, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, var(--secondary-green), var(--primary-green));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(42, 110, 63, 0.3);
+    border-color:var(--accent-orange) ;
+    transition: all 0.3s ease;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 2px solid var(--primary-green);
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 0 30px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .service-item {
+        width: 280px;
+    }
+}
+
+/* ==============================================
+   নিউজ কার্ডস স্টাইলস
+   ============================================== */
+.news-card {
+    transition: all 0.3s ease;
+    border-radius: 12px !important;
+	background-color: #f8f9fa;
+}
+
+.news-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.news-date {
+    min-width: 60px;
+}
+
+.news-date .bg-primary {
+    border-radius: 8px 8px 0 0 !important;
+    min-width: 50px;
+}
+
+/* ==============================================
+   নোটিশ পেজ স্টাইলস
+   ============================================== */
+/* বেসিক ট্যাব */
+.settings-tabs .nav-link {
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 05px 07px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    border: 1px solid var(--secondary-green);
+}
+
+/* হোভার করলে */
+.settings-tabs .nav-link:hover {
+    background-color: var(--secondary-green);
+    color: var(--white);
+}
+
+/* অ্যাকটিভ হলে */
+.settings-tabs .nav-link.active {
+    background-color: var(--secondary-green);
+    color: var(--white);
+    border: 2px solid var(--accent-orange);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: scale(1.05);
+}
+
+
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+}
+
+/* নোটিশ */
+		.notice-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+            transition: all 0.2s ease;
+            border: none;
+            margin-bottom: 12px;
+            height: auto;
+        }
+        
+        .notice-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+			transform: translateY(-2px);
+			
+        }
+        
+        .notice-header {
+           background: linear-gradient(135deg, var(--white) 0%, var(--secondary-green) 100%);
+            padding: 09px 09px;
+            color: var(--white);
+            cursor: pointer;
+			border-left: 4px solid var(--primary-green) ;
+        }
+        
+        .notice-icon {
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, var(--secondary-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            margin-right: 10px;
+			flex-shrink: 0;
+        }
+        
+        .title-date-container {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .notice-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0;
+			color: var(--text-dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 60%;
+        }
+        
+        .notice-date {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
+        
+        .notice-body {
+            padding: 05px 07px;
+            background-color: var(--white);
+			
+        }
+        
+        .notice-body p {
+            font-size: 0.85rem;
+            margin-bottom: 1px;
+            line-height: 1.4;
+            color: var(--text-dark);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+			
+        }
+        
+        .btn-notice {
+            padding: 3px 6px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+        
+        /* মোবাইল রেস্পন্সিভনেস */
+        @media (max-width: 576px) {
+            .notice-header {
+                padding: 8px 10px;
+            }
+            
+            .notice-body {
+                padding: 8px 10px;
+            }
+            
+            .notice-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+                margin-right: 8px;
+            }
+            
+            .notice-title {
+                font-size: 0.9rem;
+                
+				-webkit-line-clamp: 2;
+            }
+            
+            .notice-date {
+                font-size: 0.7rem;
+            }
+            
+            .notice-body p {
+                font-size: 0.8rem;
+            }
+        }
+
+
+
+/* লিস্ট গ্রুপ এনহ্যান্সমেন্টস */
+.list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background: linear-gradient(135deg, rgba(42, 110, 63, 0.1) 0%, rgba(26, 155, 159, 0.1) 100%);
+    transform: translateX(5px);
+    border-radius: 8px;
+}
+
+/* সার্চ এবং ফিল্টার এনহ্যান্সমেন্টস */
+.input-group-text {
+    border: none;
+    background: var(--primary-green);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(42, 110, 63, 0.25);
+}
+
+/* ==============================================
+   ফুটার স্টাইলস
+   ============================================== */
+
+footer {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+}
+
+.btn-outline-light.rounded-circle {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light.rounded-circle:hover {
+    background-color: var(--accent-orange) !important;
+    border-color: var(--accent-orange) !important;
+    transform: translateY(-3px);
+}
+
+/* ==============================================
+   কাস্টম অ্যানিমেশনস
+   ============================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* অ্যানিমেশন ক্লাসেস */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+/* লোডিং অ্যানিমেশন */
+.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ==============================================
+   নোটিফিকেশন স্টাইলস
+   ============================================== */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}
+
+/* ==============================================
+   ফ্লোটিং অ্যানিমেশন স্টাইলস
+   ============================================== */
+
+.floating {
+  display: inline-block;
+  will-change: transform;
+  transition: transform .3s ease;
+}
+
+/* ভাসা + পালস একসাথে */
+.float-pulse {
+  animation: floatY 3s ease-in-out infinite,
+             pulseAnim 2.5s ease-in-out infinite;
+}
+
+/* ভাসার এফেক্ট */
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* পালস এফেক্ট */
+@keyframes pulseAnim {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* মাউস চাপলে সামান্য ছোট হবে */
+.floating:active {
+  transform: scale(0.95);
+}
+
+/* ==============================================
+   রেসপনসিভ ডিজাইন - বিভিন্ন স্ক্রীন সাইজের জন্য
+   ============================================== */
+
+/* ক্যারousel রেসপনসিভ ডিজাইন */
+@media (max-width: 1200px) {
+    
+    .carousel-caption h2 {
+        font-size: 2.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel .carousel-item,
+    .carousel .carousel-item img {
+        height: 400px;
+    }
+    
+    .carousel-caption {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .carousel-caption .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel .carousel-item,
+    .carousel .carousel-item img {
+        height: 350px;
+    }
+    
+    .carousel-caption {
+        bottom: 5%;
+        padding: 12px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .carousel-caption .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 1px;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 6px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    /* নোটিশ পেজ রেসপনসিভ ডিজাইন */
+    .notice-header {
+        padding: 1rem;
+    }
+    
+    .notice-body {
+        padding: 1rem;
+    }
+    
+    .notice-actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .notice-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .notice-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel .carousel-item,
+    .carousel .carousel-item img {
+        height: 300px;
+    }
+    
+    .carousel-caption {
+        bottom: 3%;
+        padding: 10px;
+        width: 98%;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .carousel-caption .btn {
+        padding: 6px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 1px;
+    }
+    
+    .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.3rem;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel .carousel-item,
+    .carousel .carousel-item img {
+        height: 250px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .carousel-caption .btn {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* ==============================================
+   অ্যাক্সেসিবিলিটি ইম্প্রুভমেন্টস
+   ============================================== */
+
+/* টাচ ডিভাইস অপ্টিমাইজেশনস */
+@media (hover: none) and (pointer: coarse) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: 0.9;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        transform: translateY(-50%);
+    }
+    
+    .carousel-caption .btn:hover {
+        transform: none;
+    }
+}
+
+/* রিডিউসড মোশন সাপোর্ট */
+@media (prefers-reduced-motion: reduce) {
+    .carousel .carousel-item img {
+        animation: none;
+    }
+    
+    .carousel-caption .btn,
+    .carousel-control-prev,
+    .carousel-control-next,
+    .carousel-indicators button {
+        transition: none;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover,
+    .carousel-caption .btn:hover {
+        transform: none;
+    }
+    
+    .floating,
+    .float-pulse {
+        animation: none;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .dropdown-item:hover,
+    .service-card:hover,
+    .news-card:hover,
+    .stat-item:hover,
+    .committee-card:hover,
+    .committee-row:hover,
+    .badge:hover,
+    .btn-group .btn:hover {
+        transform: none;
+    }
+}
+
+/* ফোকাস স্টাইলস ফর অ্যাক্সেসিবিলিটি */
+.btn:focus,
+.nav-link:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(42, 110, 63, 0.25) !important;
+}
+
+/* হাই কনট্রাস্ট মোড সাপোর্ট */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-green: #000000;
+        --secondary-green: #000000;
+        --accent-orange: #ff0000;
+    }
+    
+    .bg-primary {
+        background: #000000 !important;
+    }
+    
+    .text-primary {
+        color: #000000 !important;
+    }
+}
+
+/* ডার্ক মোড সাপোর্ট */
+@media (prefers-color-scheme: dark) {
+    
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+    
+    .card {
+        border-color: #495057;
+    }
+    
+    .notice-card {
+        color: var(--text-dark);
+    }
+    
+    .notice-body p {
+        color: var(--text-dark);
+    }
+}
+
+/* ==============================================
+   প্রিন্ট স্টাইলস
+   ============================================== */
+
+@media print {
+    .navbar,
+    .btn,
+    .notification,
+    .carousel-control-prev,
+    .carousel-control-next,
+    .carousel-indicators {
+        display: none !important;
+    }
+    
+    .hero-section {
+        background: white !important;
+    }
+    
+    .service-card,
+    .news-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .carousel-caption {
+        position: static;
+        transform: none;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .carousel-caption h2 {
+        color: black !important;
+        text-shadow: none !important;
+    }
+    
+    .carousel-caption p {
+        color: black !important;
+        text-shadow: none !important;
+    }
+}
+
+/* রিডিউসড মোশন সাপোর্ট */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+
+/* ==============================================
+  কমিটি সেকশন
+   ============================================== */
+
+
+        /* Table Styles */
+        .committee-table {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .committee-table th {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            border: none;
+        }
+
+        .committee-table td {
+            padding: 1rem;
+            vertical-align: middle;
+            border-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .committee-row:hover {
+            background-color: rgba(42, 110, 63, 0.05);
+        }
+
+        .square-photo-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 2px solid var(--accent-orange);
+        }
+
+        .square-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .contact-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-green);
+        }
+
+        /* Card Styles for Mobile */
+        .committee-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-square-photo {
+            width: 125px;
+            height: 125px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 2px solid var(--accent-orange);
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.7rem;
+        }
+
+        .btn-outline-primary {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--secondary-green);
+            border-color: var(--primary-green);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .table-container {
+                display: none;
+            }
+            
+            .cards-container {
+                display: block;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .cards-container {
+                display: none;
+            }
+            
+            .table-container {
+                display: block;
+            }
+        }
+
+
+/* ==============================================
+  যোগাযোগ সেকশন
+   ============================================== */
+ .form-control-lg {
+    min-height: 50px;
+    font-size: 1rem;
+    padding: 12px 15px;
+}
+
+textarea.form-control-lg {
+    min-height: 150px;
+    resize: vertical; /* চাইলে বার্তা বক্স drag করে বড় করা যাবে */
+}
+.btn-outline-secondary.rounded-circle {
+    color:var(--secondary-green);
+	width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary.rounded-circle:hover {
+    background-color: var(--accent-orange) !important;
+    border-color: var(--accent-orange) !important;
+    transform: translateY(-3px);
+}
+ 
+
+/* ==============================================
+  টেক টিম সেকশন
+   ============================================== */
+
+         .profile-img {
+            width: 180px; 
+            height: 180px; 
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-section::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: white;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+        
+        .quote-section {
+            position: relative;
+        }
+        
+        .quote-section::before {
+            
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(42, 110, 63, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .quote-text {
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .signature {
+            font-style: italic;
+            color: var(--secondary-green);
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        /* মোবাইল ডিভাইসের জন্য স্টাইল */
+        @media (max-width: 992px) {
+            .card {
+                height: auto !important; /* মোবাইলে উচ্চতা স্বয়ংক্রিয় */
+            }
+         
+            .profile-section {
+                padding: 2rem 1rem !important;
+            }
+            
+            .profile-img {
+                width: 150px; /* মোবাইলে একটু ছোট */
+                height: 150px; /* মোবাইলে একটু ছোট */
+            }
+			
+        }
+        
+        @media (max-width: 576px) {
+            .profile-img {
+                width: 130px; /* ছোট স্ক্রিনে আরও ছোট */
+                height: 130px; /* ছোট স্ক্রিনে আরও ছোট */
+            }
+            
+            .quote-section::before {
+                font-size: 60px;
+                top: 10px;
+                left: 15px;
+            }
+        }
+		
+		
+		
+		
+		
+/* ==============================================
+  কমিটি এক্টিভিটি সেকশন
+============================================== */
+.activity-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--primary-green);
+           
+            margin: 0 auto 1.5rem;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-header {
+            background: linear-gradient(to right, rgba(42, 110, 63, 0.1), rgba(26, 155, 159, 0.05));
+            padding: 0.4rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .comitee-profile-img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border: 2px solid var(--accent-orange);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-title {
+            font-size: 0.75rem;
+            color: var(--dark-text);
+            font-weight: 500;
+            
+        }
+		.profile-name{
+			font-size: 0.95rem;
+            color: var(--secondary-green);
+            font-weight: 600;
+            margin-top: 0.1rem;
+		}
+        .activity-title {
+            color: #333333;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
+        }
+
+        .activity-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .date-badge {
+            background-color: var(--secondary-green);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .date-badge i {
+            margin-right: 0.2rem;
+            font-size: 0.7rem;
+        }
+
+        .date-separator {
+            color: var(--secondary-green);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .activity-body {
+            padding: 1rem;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .activity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0.8rem;
+            margin-bottom: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .activity-item:hover {
+            background-color: rgba(42, 110, 63, 0.1);
+            transform: translateX(3px);
+        }
+
+        .activity-name {
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 0.85rem;
+        }
+
+        .view-btn {
+            background-color: var(--accent-orange);
+            color: var(--text-dark);
+            border: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            font-size: 0.7rem;
+        }
+
+        .view-btn:hover {
+            background-color: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .activity-section {
+                justify-content: center;
+                margin-bottom: 0.8rem;
+            }
+            
+            .date-badge {
+                font-size: 0.65rem;
+            }
+            
+            .activity-card {
+                margin: 0 0.5rem 1.5rem;
+            }
+        }
+		
+		
+/* ==============================================
+   সার্ভিস কার্ডস স্টাইলস পেজ
+   ============================================== */
+		.help-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .bg-secondary-help {
+            background: linear-gradient(135deg, var(--secondary-green) 0%, #168d8f 50%, var(--accent-orange) 100%);
+        }
+		
+        .btn-secondary-help {
+            background-color: var(--secondary-green);
+            color: white;
+            border: none;
+        }
+		.btn-secondary-help:hover {
+            background-color: var(--secondary-green);
+            color: var(--accent-orange);
+            border: none;
+        }
+        
+        .help-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .help-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        .help-feature i {
+            color: var(--text-dark);
+        }
+		
+		
+		
+	/* ==============================================
+   কাস্টম পেজিনেশন স্টাইল 
+   ============================================== */	
+		
+        .pagination.custom-pagination {
+            margin-bottom: 0;
+        }
+        
+        .custom-pagination .page-item {
+            margin: 0 4px;
+        }
+        
+        .custom-pagination .page-link {
+            color: var(--primary-green);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-pagination .page-link:hover {
+            background-color: var(--primary-green);
+            color: var(--white);
+            border-color: var(--primary-green);
+        }
+        
+        .custom-pagination .page-item.active .page-link {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: var(--white);
+        }
+        
+        .custom-pagination .page-item.disabled .page-link {
+            color: #6c757d;
+            pointer-events: none;
+            background-color: var(--white);
+            border-color: #dee2e6;
+        }
+        
+        /* আরো সুন্দর করার জন্য কিছু অতিরিক্ত স্টাইল */
+        .custom-pagination .page-link:focus {
+            box-shadow: 0 0 0 0.25rem rgba(42, 110, 63, 0.25);
+        }
+        
+        .custom-pagination .page-item:first-child .page-link,
+        .custom-pagination .page-item:last-child .page-link {
+            border-radius: 8px;
+        }
+        
+        /* রেস্পন্সিভ স্টাইল */
+        @media (max-width: 576px) {
+            .custom-pagination .page-link {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .custom-pagination .page-item {
+                margin: 0 2px;
+            }
+        }
+
+/* ==============================================
+   কাস্টম ফর্ম স্টাইল 
+   ============================================== */
+        .member_form {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .application-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .application-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .application-body {
+            padding: 2rem;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            color: #333333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-orange);
+            display: inline-block;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.25rem rgba(42, 110, 63, 0.25);
+        }
+
+
+
+        .required-field::after {
+            content: '*';
+            color: #dc3545;
+            margin-left: 3px;
+        }
+
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary-green);
+            background-color: rgba(42, 110, 63, 0.05);
+        }
+
+        .upload-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-green);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .application-body {
+                padding: 1.5rem;
+            }
+
+            .application-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+/* ==============================================
+   মেট্রিমনি ফর্ম স্টাইল 
+   ============================================== */
+
+/* মূল ফ্লোটিং মোডাল র‍্যাপার */
+.floating-wrap {
+    position: relative;
+    margin-bottom: .50rem;
+}
+
+/* আইকন এবং ইনপুট সহ পুরো কন্টেইনার */
+.floating-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .5rem;
+    background: #fff;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* ফোকাস করার সময় নীল বর্ডার ও শ্যাডো */
+.floating-input-container:focus-within {
+    border-color: var(--secondary-green);
+    box-shadow: 0 0 0 .10rem var(--secondary-green);
+}
+
+/* আইকনের স্টাইল এবং অবস্থান */
+.icon-addon {
+    padding-left: .75rem;
+    padding-right: .5rem;
+    color: #495057;
+    transition: color .15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    min-width: 24px;
+}
+
+.floating-input-container:focus-within .icon-addon {
+    color: #0d6efd;
+}
+
+/* ইনপুট ফিল্ড */
+.floating-input {
+    width: 100%;
+    padding: 1rem .75rem .75rem .25rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    height: auto;
+    flex-grow: 1;
+}
+
+.floating-input:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* select ইনপুট */
+select.floating-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+}
+
+/* ভাসমান লেবেল */
+.floating-label {
+    position: absolute;
+    left: 2.5rem;
+    top: 1rem;
+    pointer-events: none;
+    transition: transform .18s ease, font-size .18s ease, color .18s ease, top .18s ease;
+    color: #6c757d;
+    font-size: 1rem;
+    transform-origin: left top;
+    background: transparent;
+    padding: 0 .25rem;
+    z-index: 10;
+}
+
+/* লেবেল উপরে উঠলে */
+.floating-input:focus+.floating-label,
+.floating-input:not(:placeholder-shown)+.floating-label,
+select.floating-input:valid+.floating-label {
+    transform: translateY(-0.9rem) scale(.93);
+    top: .3rem;
+    font-size: .85rem;
+    color: var(--text-dark);
+    background: #fff;
+    left: 2.4rem;
+}
+
+/* মিডিয়া কোয়েরি (আগের মতোই রাখা হয়েছে) */
+@media (max-width: 576px) {
+    .floating-label {
+        left: 2.2rem;
+        top: .9rem;
+    }
+
+    .floating-input:focus+.floating-label,
+    .floating-input:not(:placeholder-shown)+.floating-label,
+    select.floating-input:valid+.floating-label {
+        transform: translateY(-0.8rem) scale(.93);
+        top: .15rem;
+        left: 2.1rem;
+    }
+
+    .icon-addon {
+        padding-left: .5rem;
+        padding-right: .25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .floating-label {
+        left: 2rem;
+        top: .8rem;
+        font-size: 0.9rem;
+    }
+
+    .floating-input:focus+.floating-label,
+    .floating-input:not(:placeholder-shown)+.floating-label,
+    select.floating-input:valid+.floating-label {
+        transform: translateY(-0.7rem) scale(.9);
+        top: .1rem;
+        left: 1.9rem;
+        font-size: .8rem;
+    }
+
+    .floating-input {
+        font-size: 0.9rem;
+        padding: 0.9rem .5rem .2rem .2rem;
+    }
+
+    .icon-addon {
+        padding-left: .4rem;
+        padding-right: .2rem;
+    }
+}
+
+/* কার্ড স্টাইল */
+.card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+/* ✨ নতুন যোগ করা হয়েছে: ব্যক্তি অনুসন্ধান শিরোনামের ব্যাকগ্রাউন্ড স্টাইল */
+.card-title {
+    color: #fff !important;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 0 !important;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%) !important;
+    border-top-left-radius: 0.45rem;
+    border-top-right-radius: 0.45rem;
+    width: 100%;
+    display: block;
+}
+
+/* কার্ড বডিতে প্যাডিং সামঞ্জস্য করা হয়েছে */
+.card-body-content {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+@media (max-width: 576px) {
+    .card-body-content {
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
+    }
+}
+
+/* তারিখের ব্যাপ্তি লেবেলের জন্য স্টাইল */
+.date-range-label {
+    font-weight: bold;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+
+/* LifeTime Members View Style */
+.member-table-wrapper {
+    font-family: "Noto Sans Bengali", sans-serif;
+    padding-bottom: 50px;
+}
+
+.member-table-wrapper .page-title {
+    font-weight: 700;
+    color: var(--primary-green);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.member-table-wrapper .card {
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.member-table-wrapper .card-header {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    border-bottom: none;
+}
+
+.member-table-wrapper .card-header h5 {
+    font-weight: 600;
+}
+
+.member-table-wrapper .table thead th {
+    background-color: #e8f5e9;
+    color: var(--primary-green);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* TABLE CONTENT WRAP */
+.member-table-wrapper .table td,
+.member-table-wrapper .table th {
+    white-space: normal !important;
+    /* Line break করা যাবে */
+    word-wrap: break-word;
+    /* বড় শব্দ লাইন ব্রেক হবে */
+}
+
+/* Prevent horizontal scroll */
+.member-table-wrapper .table-responsive {
+    overflow-x: hidden !important;
+}
+
+.member-table-wrapper .table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.member-table-wrapper .table-hover tbody tr:hover {
+    background-color: #effff3;
+    transform: scale(1.01);
+}
+
+.member-table-wrapper .btn-info {
+    background: linear-gradient(135deg, #0dcaf0, #0b84b9);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.member-table-wrapper .btn-info:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #0b84b9, #0dcaf0);
+}
+
+.member-table-wrapper .search-box {
+    position: relative;
+}
+
+.member-table-wrapper .search-box input {
+    border-radius: 30px;
+    padding-left: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.member-table-wrapper .search-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--primary-green);
+}
+
+/* .member-table-wrapper .pagination .page-link {
+    border: none;
+    color: var(--primary-green);
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.member-table-wrapper .pagination .active .page-link {
+    background: var(--primary-green);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.page-link:hover{
+    background: var(--primary-green);
+    color: white;
+} */
+
+.member-table-wrapper .card-footer {
+    background: transparent;
+    color: #333;
+}
+
+/* MODAL */
+.member-table-wrapper .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.member-table-wrapper .modal-header {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+    color: white;
+}
+
+.member-table-wrapper .modal-body img {
+    object-fit: cover;
+}
+
+.member-table-wrapper .modal-body .badge {
+    font-size: 0.9rem;
+    margin: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .member-table-wrapper .table thead {
+        display: none;
+    }
+
+    .member-table-wrapper .table,
+    .member-table-wrapper .table tbody,
+    .member-table-wrapper .table tr,
+    .member-table-wrapper .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .member-table-wrapper .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none !important;
+        border-bottom: 1px solid #ddd !important;
+    }
+
+    .member-table-wrapper .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 50%;
+        font-weight: 600;
+        color: var(--primary-green);
+        text-align: left;
+        }
+    }
+/* ==============================================
+   ডোনেটর পেজ স্টাইল
+   ============================================== */
+.donator .table th,
+.donator .table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.donator .card {
+    border-radius: 10px;
+}
+
+.donator .card-body p {
+    font-size: 0.9rem;
+}
+
+.donator .modal-content {
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .donator h1.display-5 {
+        font-size: 1.8rem;
+    }
+
+    .donator .card-body h5 {
+        font-size: 1.1rem;
+    }
+
+    .donator .btn {
+        font-size: 0.85rem;
+    }
+
+    .modal-dialog {
+        max-width: 95% !important;
+        margin: 1rem auto;
+    }
+}
+
+/* Life Time And Genaral Person Apply From Check Box Style */
+.relation-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid var(--primary-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.relation-checkbox:checked {
+    background-color: var(--primary-green);
+    box-shadow: 0 0 4px rgba(13, 110, 253, 0.6);
+}
+
+.relation-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.relation-label {
+    margin-left: 5px;
+    font-weight: 500;
+    color: #333;
+}
