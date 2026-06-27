@@ -1,5 +1,8 @@
 # 📝 BAMJUKS - Advanced Organization & Multi-Committee Management System
 
+[![Live Demo](https://img.shields.io/badge/🌐-Live_Demo-success?style=for-the-badge)](https://demo.mcqbankbd.com)
+[![Admin Demo](https://img.shields.io/badge/🛠-Admin_Demo-blue?style=for-the-badge)](https://demo.mcqbankbd.com/dashboard)
+
 **BAMJUKS** is a robust, feature-rich management platform built with the Laravel framework. It is specifically designed to streamline organizational operations through multi-committee management, dynamic memberships, financial auditing, and integrated blogging.
 
 ---
